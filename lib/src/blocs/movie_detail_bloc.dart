@@ -20,7 +20,7 @@ class MovieDetailBloc {
     _trailers.close();
   }
 
-  Future<TrailerModel> _trailerModelSeed = Future(() => TrailerModel.fromJson({}));
+  Future<TrailerModel> _trailerModelSeed = Future(() => TrailerModel.fromJson({'id':0, 'results':[]}));
   _itemTransformer() {
     return ScanStreamTransformer(
         (Future<TrailerModel> trailer, int id, int index) {
